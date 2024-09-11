@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
-import { getUserProfile, login } from "../api/auth";
 
 import AuthForm from "../components/AuthForm";
 
@@ -8,7 +7,7 @@ const Login = ({ setUser }) => {
   const handleLogin = async (formData) => {
     try {
     } catch (error) {
-      alert("로그인에 실패했습니다. 다시 시도해주세요.");
+      alert("로그인에 실패. 츄라이어겐.");
     }
   };
 
@@ -19,7 +18,7 @@ const Login = ({ setUser }) => {
         <AuthForm mode="login" onSubmit={handleLogin} />
         <div>
           <p>
-            계정이 없으신가요? <Link to="/signup">회원가입</Link>
+            u have no 계정 ?<Link to="/signup">회원가입</Link>
           </p>
         </div>
       </div>
