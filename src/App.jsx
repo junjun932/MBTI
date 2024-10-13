@@ -3,12 +3,13 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
-import Login from "./pages/Login";
-import ProfilePage from "./pages/ProfilePage";
-import ProtectedRoute from "./components/ProtectedRoute";
-import Signup from "./pages/Signup";
-import TestPage from "./pages/TestPage";
-import TestResultPage from "./pages/TestResultPage";
+
+// import Login from "./pages/Login";
+// import ProfilePage from "./pages/ProfilePage";
+// import ProtectedRoute from "./components/ProtectedRoute";
+// import Signup from "./pages/Signup";
+// import TestPage from "./pages/TestPage";
+// import TestResultPage from "./pages/TestResultPage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -17,8 +18,8 @@ function App() {
     <Router>
       <Layout user={user} setUser={setUser}>
         <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/signup" element={<Signup />} />
           <Route
             path="/profile"
@@ -43,9 +44,9 @@ function App() {
                 <TestResultPage user={user} />
               </ProtectedRoute>
             }
-          />
-        </Routes> */}
-    </Layout>
+          /> */}
+        </Routes>
+      </Layout>
     </Router>
   );
 }

@@ -4,9 +4,9 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h1>이게 최종 찐 막 MBTI 테스트</h1>
-      <p>아묻따 선택 ㄱ ㄱ</p>
-      <Link to="/src/pages/Login.jsx">로그인하기</Link>
+      <h1>MBTI TEST </h1>
+      <p>너 설마 T야 ? 솔직하게 답해주thㅔ요</p>
+      <Link to="/login">로그인하기</Link>
     </div>
   );
 };
