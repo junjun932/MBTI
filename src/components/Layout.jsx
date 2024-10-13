@@ -15,7 +15,6 @@ const Layout = ({ children }) => {
           <div className="space-x-4">
             {user ? (
               <>
-                <button onClick={}>테스트하기</button>
                 <button onClick={handleLogout}>로그아웃</button>
               </>
             ) : (
