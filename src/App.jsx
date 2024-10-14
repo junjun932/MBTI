@@ -4,8 +4,8 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Login from "./pages/Login";
-// import ProfilePage from "./pages/ProfilePage";
-// import ProtectedRoute from "./components/ProtectedRoute";
+import Profile from "./pages/Profile";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Signup from "./pages/Signup";
 
 // import TestPage from "./pages/TestPage";
@@ -18,19 +18,19 @@ function App() {
     <Router>
       <Layout user={user} setUser={setUser}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={user} />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/signup" element={<Signup />} />
-          {/* 
+
           <Route
             path="/profile"
             element={
               <ProtectedRoute user={user}>
-                <ProfilePage user={user} setUser={setUser} />
+                <Profile user={user} setUser={setUser} />
               </ProtectedRoute>
             }
           />
-          <Route
+          {/* <Route
             path="/test"
             element={
               <ProtectedRoute user={user}>
