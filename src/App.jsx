@@ -3,8 +3,8 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
+import Login from "./pages/Login";
 
-// import Login from "./pages/Login";
 // import ProfilePage from "./pages/ProfilePage";
 // import ProtectedRoute from "./components/ProtectedRoute";
 // import Signup from "./pages/Signup";
@@ -19,8 +19,8 @@ function App() {
       <Layout user={user} setUser={setUser}>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/login" element={<Login setUser={setUser} />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          {/* <Route path="/signup" element={<Signup />} />
           <Route
             path="/profile"
             element={
