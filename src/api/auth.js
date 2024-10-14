@@ -24,9 +24,8 @@ return response.data;
 };
 //프로필업데이트,이미지변경 닉네임변경
 export const updateProfile = async (formData) => {
-    const token =localStorage.getItem("accessToken");
-const response= await axios.patch(`${(API_URL)}/profile`, formData 
-    {
+    const token = localStorage.getItem("accessToken");
+    const response = await axios.patch(`${API_URL}/profile` , formData ,{
         headers: {
             "Content-Type": "multipart/form-data" ,
             "Authorization": `Bearer ${token}`
