@@ -7,9 +7,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Signup from "./pages/Signup";
-
-// import TestPage from "./pages/TestPage";
-// import TestResultPage from "./pages/TestResultPage";
+import TestPage from "./pages/TestPage";
+import TestResultPage from "./pages/TestResultPage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,7 +29,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          {/* <Route
+          <Route
             path="/test"
             element={
               <ProtectedRoute user={user}>
@@ -45,7 +44,7 @@ function App() {
                 <TestResultPage user={user} />
               </ProtectedRoute>
             }
-          /> */}
+          />
         </Routes>
       </Layout>
     </Router>
