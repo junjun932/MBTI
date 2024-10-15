@@ -10,7 +10,7 @@ export const getTestResults = async () => {
 
 export const createTestResult = async (resultData) => {
   const response = await axios.post(API_URL, resultData);
-  return response.date;
+  return response.data;
 };
 
 export const deleteTestResult = async (id) => {
