@@ -19,7 +19,7 @@ const TestForm = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 p-4 bg-gray-100 rounded shadow-md"
+      className="space-y-4 p-4 bg-gray-400 rounded shadow-md"
     >
       {questions.map((q, index) => (
         <div key={q.id} className="mb-4">
@@ -32,7 +32,7 @@ const TestForm = ({ onSubmit }) => {
                 value={option}
                 checked={answers[index] === option}
                 onChange={() => handleChange(index, option)}
-                className="mr-2"
+                className="mr-2 "
               />
               {option}
             </label>

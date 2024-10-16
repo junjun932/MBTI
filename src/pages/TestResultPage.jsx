@@ -1,6 +1,8 @@
 import axios from "axios";
 //crud
 
+function TestResultPage() {}
+
 const API_URL = "http://localhost:5001/testResults";
 
 export const getTestResults = async () => {
@@ -24,3 +26,5 @@ export const updateTestResultVisibility = async (id, visibility) => {
   });
   return response.data;
 };
+
+export default TestResultPage;
