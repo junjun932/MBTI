@@ -1,30 +1,43 @@
-import axios from "axios";
-//crud
+import React, { useEffect, useState } from "react";
 
-function TestResultPage() {}
+import TestResultList from "../components/TestResultList";
+import { getTestResults } from "../api/testResults";
 
-const API_URL = "http://localhost:5001/testResults";
+const TestResult = ({ user }) => {
+  const [results, setResults] = useState([]);
 
-export const getTestResults = async () => {
-  const response = await axios.get(API_URL);
-  return response.data;
+  const fetchResults = async () => {
+    const data = await getTestResults();
+    setResults(data);
+  };
+
+  useEffect(() => {
+    fetchResults();
+  }, []);
+
+  const handleUpdate = () => {
+    fetchResults();
+  };
+
+  const handleDelete = () => {
+    fetchResults();
+  };
+
+  return (
+    <div className="w-full flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-8">
+      <div className="bg-white max-w-2xl w-full">
+        <h1 className="text-3xl font-bold text-primary-color mb-6 text-center">
+          모든 테스트 결과
+        </h1>
+        <TestResultList
+          results={results}
+          user={user}
+          onUpdate={handleUpdate}
+          onDelete={handleDelete}
+        />
+      </div>
+    </div>
+  );
 };
 
-export const createTestResult = async (resultData) => {
-  const response = await axios.post(API_URL, resultData);
-  return response.data;
-};
-
-export const deleteTestResult = async (id) => {
-  const response = await axios.delete(`${API_URL}/${id}`);
-  return response.data;
-};
-
-export const updateTestResultVisibility = async (id, visibility) => {
-  const response = await axios.patch(`${API_URL}/${id}`, {
-    visibility: visibility,
-  });
-  return response.data;
-};
-
-export default TestResultPage;
+export default TestResult;
