@@ -1,4 +1,5 @@
 //mbti 스코어
+import { questions } from "../data/questions";
 
 export const calculateMBTI = (answers) => {
   const scores = {
