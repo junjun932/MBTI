@@ -9,6 +9,7 @@ const Test = ({ user }) => {
 
   const handleTestSubmit = async (answers) => {
     const result = calculateMBTI(answers);
+    console.log(user);
     const resultData = {
       userId: user.id,
       nickname: user.nickname,

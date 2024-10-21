@@ -23,6 +23,7 @@ const Layout = ({ user, setUser, children }) => {
           <div className="space-x-4">
             {user ? (
               <div className="flex gap-2 items-center">
+                <Link to="/results">테스트 히스토리</Link>
                 <Link to="/test">테스트</Link>
                 <Link to="/profile">프로필</Link>
                 <div>{user.nickname} 님</div>
